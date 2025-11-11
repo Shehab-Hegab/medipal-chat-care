@@ -22,6 +22,8 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          50: "hsl(var(--primary-50))",
+          700: "hsl(var(--primary-700))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -47,15 +49,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
+        "bot-bubble": {
+          DEFAULT: "hsl(var(--bot-bubble))",
+          foreground: "hsl(var(--bot-bubble-foreground))",
+        },
+        "user-bubble": {
+          DEFAULT: "hsl(var(--user-bubble))",
+          foreground: "hsl(var(--user-bubble-foreground))",
         },
       },
       borderRadius: {
