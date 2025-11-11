@@ -1,11 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { Bell, List, Info } from "lucide-react";
+import { Bell, List, Info, Trash2 } from "lucide-react";
 
 interface QuickActionsProps {
   onAction: (action: string) => void;
+  onClearChat: () => void;
 }
 
-export const QuickActions = ({ onAction }: QuickActionsProps) => {
+export const QuickActions = ({ onAction, onClearChat }: QuickActionsProps) => {
   const actions = [
     { label: "Set Reminder", icon: Bell, action: "Set a medication reminder" },
     { label: "Show Reminders", icon: List, action: "Show my reminders" },
@@ -26,6 +27,15 @@ export const QuickActions = ({ onAction }: QuickActionsProps) => {
           {item.label}
         </Button>
       ))}
+      <Button
+        variant="outline"
+        size="sm"
+        className="text-xs ml-auto"
+        onClick={onClearChat}
+      >
+        <Trash2 className="w-3 h-3 mr-1.5" />
+        Clear Chat
+      </Button>
     </div>
   );
 };

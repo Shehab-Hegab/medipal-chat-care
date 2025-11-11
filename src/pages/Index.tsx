@@ -168,6 +168,22 @@ const Index = () => {
     });
   };
 
+  const handleClearChat = () => {
+    setMessages([
+      {
+        id: "cleared",
+        role: "assistant",
+        content: "Chat history cleared. How may I assist you now?",
+        timestamp: new Date(),
+      },
+    ]);
+    setReminders([]);
+    toast({
+      title: "Chat cleared",
+      description: "Your chat history and reminders have been reset.",
+    });
+  };
+
   return (
     <div className="flex flex-col h-screen bg-background">
       <Header />
@@ -186,7 +202,7 @@ const Index = () => {
             <div ref={messagesEndRef} />
           </div>
 
-          <QuickActions onAction={handleSendMessage} />
+          <QuickActions onAction={handleSendMessage} onClearChat={handleClearChat} />
 
           <div className="border-t bg-card p-4">
             <div className="flex gap-2 max-w-4xl mx-auto">
